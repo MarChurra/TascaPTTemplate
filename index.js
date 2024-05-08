@@ -65,7 +65,7 @@ function renderMenuOpts(options) {
             <p class = "list-ingredients" >${ingredientString}</p>
             <p class = "price">${price}€</p>
             </div>
-           <img src="/public/plus.png" data-id="${id}" class="plus-btn" alt="Plus icon">
+           <img src="/plus.png" data-id="${id}" class="plus-btn" alt="Plus icon">
         </div>
         `
     }).join(' ')
@@ -93,7 +93,7 @@ function renderTotalOrder() {
         totalOrderEl.innerHTML += `
         <div class="checkout">
             <p>${item.name}</p>
-            <img class= "remove-btn" src="/public/bin.png" alt="remove" data-index="${index}"></img>
+            <img class= "remove-btn" src="/bin.png" alt="remove" data-index="${index}"></img>
             <p class="checkout-item-price">${item.price}€</p>
         </div>
         `
