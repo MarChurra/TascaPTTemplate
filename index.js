@@ -151,12 +151,19 @@ function renderPayment() {
         <input type="submit" class="pay-btn" name="Pay" value="Pay">
     `
         document.body.appendChild(modalContent)
+
+        document.addEventListener('click', function (e) {
+            if (!modalContent.contains(e.target)) {
+                modalContent.style.display = "none"
+            }
+        })
     }
 }
 
 //Render the Thank you Message & Score
 function renderThankYou() {
     const paymentModal = document.querySelector('.payment-modal')
+    paymentModal.style.display = "none"
 
 
     const appreciationModalExists = document.querySelector('.appreciationModal')
@@ -214,4 +221,4 @@ function loadOrderFromSessionStorage() {
 }
 
 loadOrderFromSessionStorage()
-render ()
+render()

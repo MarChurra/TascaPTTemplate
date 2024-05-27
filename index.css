@@ -16,7 +16,7 @@ body {
 
 .container,
 .container #selectOptions {
-    width: 90%;
+    width: 95%;
     margin: 0 auto;
 }
 
@@ -25,9 +25,9 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 30%;
+    height: 35%;
     width: 100%;
-    padding: 1px;
+    padding-top: 1px;
 }
 
 .banner-content {
@@ -119,19 +119,20 @@ h2 {
     align-items: center;
 }
 
-.order-title{
+.order-title {
     text-align: center;
     font-size: 3rem;
     margin: 2.5em 0 2.5em;
 }
 
 .checkout p {
-font-size: 2rem;
-display: inline-flex;
-padding: 0px;
+    font-size: 2rem;
+    display: inline-flex;
+    padding: 0px;
 }
 
-.checkout p, .remove-btn {
+.checkout p,
+.remove-btn {
     justify-self: flex-start;
     margin-right: 0.8em;
 }
@@ -192,22 +193,22 @@ padding: 0px;
     justify-content: center;
     align-items: center;
     width: 40%;
-    height: 50%;
+    height: 60%;
     top: 50%;
     left: 50%;
     gap: 1em;
     transform: translate(-50%, -50%);
     z-index: 2;
-    background-color: rgb(229, 229, 229) ;
+    background-color: rgb(229, 229, 229);
     border-radius: 10px;
     border: 5px solid black;
     box-sizing: border-box;
+    max-height: 400px;
 }
 
 input {
     width: 90%;
-    padding: 1em;
-    text-align: left;
+    padding: 0.8em;
 }
 
 label {
@@ -219,12 +220,12 @@ label {
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+    -webkit-appearance: none;
+    margin: 0;
 }
 
-input[type=submit]{
-    background-color: #16DB99;
+input[type=submit] {
+    background-color: #17c78d;
     color: #FFFFFF;
     text-shadow: 0 0 1px black;
     cursor: pointer;
@@ -233,6 +234,7 @@ input[type=submit]{
     border-radius: 8px;
     font-size: 1.5rem;
     font-weight: bold;
+    width: 80%;
 }
 
 input[type=submit]:active {
@@ -246,13 +248,15 @@ input[type=submit]:active {
     text-align: center;
     justify-content: center;
     width: 40%;
+    max-width: 450px;
     height: 50%;
+    max-height: 350px;
     top: 50%;
     left: 50%;
     gap: 2em;
     transform: translate(-50%, -50%);
     z-index: 2;
-    background-color: rgb(229, 229, 229) ;
+    background-color: rgb(229, 229, 229);
     border-radius: 10px;
     padding: 1.3em;
     color: black;
@@ -266,7 +270,8 @@ input[type=submit]:active {
     text-decoration: underline;
 }
 
-.appreciationModal h3, .appreciationModal h4 {
+.appreciationModal h3,
+.appreciationModal h4 {
     font-size: 1.3rem;
 }
 
@@ -277,7 +282,7 @@ input[type=submit]:active {
 }
 
 .star {
-    cursor:pointer;
+    cursor: pointer;
     font-size: 1.7rem;
     color: #cccccc;
 }
@@ -288,3 +293,51 @@ input[type=submit]:active {
     opacity: 80%;
 }
 
+@media (max-width: 600px) {
+
+    .emoji {
+        font-size: 3.5rem;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+    }
+
+    .menu-option p {
+        font-size: 1rem;
+    }
+
+    .menu-option h3 {
+        font-size: 1.25rem;
+    } 
+
+    .plus-btn {
+        width: 30px;
+        align-self: center;
+        margin-right: 2em;
+    }
+
+    .order-title {
+        font-size: 2rem;
+    }
+
+    #orderTotal p {
+        font-size: 1.25rem;
+    }
+
+    .total-price {
+        font-size: 1.3rem;
+    }
+
+    .payment-modal {
+        width: 75%;
+        max-height: 400px;
+    }
+
+    .appreciationModal {
+        height: auto;
+        width: 75%;
+        max-width: 500px;
+        max-height: 375px;
+    }
+}
